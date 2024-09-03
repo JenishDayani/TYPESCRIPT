@@ -1,0 +1,79 @@
+Create File :- Script.ts
+
+Open Terminal
+npm init
+	entry point :- script.js
+	yes
+
+
+Open Package.json
+"scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "start": "lite-server"
+},
+
+Open Terminal
+npm install lite-server
+npm install
+tsc -init     tsc.cmd -init
+
+Open tsconfig.json
+"target": "ES2020",
+"lib": ["ES6","DOM"],
+"module": "commonjs",
+"rootDir": "./",
+"outDir": "./",
+"esModuleInterop": true,
+"forceConsistentCasingInFileNames": true,
+
+"strict": true,
+"noImplicitAny": true,
+ "strictNullChecks": true,
+"strictFunctionTypes": true, 
+"strictBindCallApply": true,
+"strictPropertyInitialization": true,
+"noImplicitThis": true,
+"useUnknownInCatchVariables": true,
+"alwaysStrict": true, 
+"noUnusedLocals": true,
+"noUnusedParameters": true
+"exactOptionalPropertyTypes": true,
+"noImplicitReturns": true,
+"noFallthroughCasesInSwitch": true,
+"noUncheckedIndexedAccess": true,
+"noPropertyAccessFromIndexSignature": true,
+"allowUnusedLabels": true,
+"allowUnreachableCode": true,
+
+"skipLibCheck": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": [".vscode","node_modules"],
+}
+
+Open Script.js
+console.log('Hello World')
+
+Open Terminal 
+npm run compile
+
+create file Index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TypeScript</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body></body>
+</html>
+
+Open Terminal
+npm run start 
+
+Note :- 
+npm run compile we have to run whenever we change the script.ts file so to not type every time we can run 
+npm run watch
